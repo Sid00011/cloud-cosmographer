@@ -1,0 +1,2 @@
+﻿pytest>=8.0
+moto[s3,ec2,iam]>=5.0
