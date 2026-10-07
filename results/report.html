@@ -13,13 +13,13 @@ th{background:#f4f4f4}
 .sev-Medium{color:#b8860b} .sev-Low{color:#666}
 </style></head><body>
 <h1>CloudCosmo &mdash; rapport de cartographie</h1>
-<div class="meta">GÃ©nÃ©rÃ© le 2026-10-07 11:43 UTC &middot; 4 finding(s)</div>
+<div class="meta">Généré le 2026-10-07 12:50 UTC &middot; 4 finding(s)</div>
 <p>Score : <span class="grade">E</span> (0 / 100)</p>
 <table>
-<tr><th>RÃ¨gle</th><th>SÃ©vÃ©ritÃ©</th><th>Ressource</th><th>Description</th></tr>
-<tr><td>S3_PUBLIC_BUCKET</td><td class="sev-Critical">Critical</td><td>s3:public-leaky-bucket</td><td>Bucket 'public-leaky-bucket' est accessible publiquement (ACL publique: False, policy publique: True) et Block Public Access n'est pas pleinement activÃ©.</td></tr>
-<tr><td>SG_OPEN_TO_WORLD</td><td class="sev-Critical">Critical</td><td>sg:sg-b7c3d3ac408a293fb</td><td>Security group 'open-ssh' (sg-b7c3d3ac408a293fb) autorise SSH depuis 0.0.0.0/0.</td></tr>
-<tr><td>IAM_WILDCARD_POLICY</td><td class="sev-Critical">Critical</td><td>policy:arn:aws:iam::123456789012:policy/TooMuchPower</td><td>La policy 'arn:aws:iam::123456789012:policy/TooMuchPower' autorise Action:* sur Resource:* (privilÃ¨ge administrateur de facto).</td></tr>
-<tr><td>ADMIN_USER_WITH_ACTIVE_KEYS</td><td class="sev-High">High</td><td>user:arn:aws:iam::123456789012:user/over-privileged-user</td><td>L'utilisateur 'over-privileged-user' a des clÃ©s d'accÃ¨s actives et une policy administrateur attachÃ©e.</td></tr>
+<tr><th>Règle</th><th>Sévérité</th><th>Ressource</th><th>Description</th></tr>
+<tr><td>S3_PUBLIC_BUCKET</td><td class="sev-Critical">Critical</td><td>s3:public-leaky-bucket</td><td>Bucket 'public-leaky-bucket' est accessible publiquement (ACL publique: False, policy publique: True) et Block Public Access n'est pas pleinement activé.</td></tr>
+<tr><td>SG_OPEN_TO_WORLD</td><td class="sev-Critical">Critical</td><td>sg:sg-5570d2b9f19a76715</td><td>Security group 'open-ssh' (sg-5570d2b9f19a76715) autorise SSH depuis 0.0.0.0/0.</td></tr>
+<tr><td>IAM_WILDCARD_POLICY</td><td class="sev-Critical">Critical</td><td>policy:arn:aws:iam::123456789012:policy/TooMuchPower</td><td>La policy 'arn:aws:iam::123456789012:policy/TooMuchPower' autorise Action:* sur Resource:* (privilège administrateur de facto).</td></tr>
+<tr><td>ADMIN_USER_WITH_ACTIVE_KEYS</td><td class="sev-High">High</td><td>user:arn:aws:iam::123456789012:user/over-privileged-user</td><td>L'utilisateur 'over-privileged-user' a des clés d'accès actives et une policy administrateur attachée.</td></tr>
 </table>
 </body></html>
