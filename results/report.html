@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<title>CloudCosmo - Rapport</title>
+<style>
+body{font-family:-apple-system,Segoe UI,Arial,sans-serif;margin:2rem;color:#111}
+h1{margin-bottom:0} .meta{color:#555;margin-bottom:1.5rem}
+.grade{display:inline-block;font-size:2rem;font-weight:bold;padding:.2rem .8rem;
+  border-radius:.4rem;background:#8e0000;color:#fff}
+table{border-collapse:collapse;width:100%;margin-top:1rem}
+th,td{border:1px solid #ddd;padding:.5rem;text-align:left;font-size:.9rem;vertical-align:top}
+th{background:#f4f4f4}
+.sev-Critical{color:#b00020;font-weight:bold} .sev-High{color:#d35400;font-weight:bold}
+.sev-Medium{color:#b8860b} .sev-Low{color:#666}
+</style></head><body>
+<h1>CloudCosmo &mdash; rapport de cartographie</h1>
+<div class="meta">Généré le 2026-10-07 11:43 UTC &middot; 4 finding(s)</div>
+<p>Score : <span class="grade">E</span> (0 / 100)</p>
+<table>
+<tr><th>Règle</th><th>Sévérité</th><th>Ressource</th><th>Description</th></tr>
+<tr><td>S3_PUBLIC_BUCKET</td><td class="sev-Critical">Critical</td><td>s3:public-leaky-bucket</td><td>Bucket 'public-leaky-bucket' est accessible publiquement (ACL publique: False, policy publique: True) et Block Public Access n'est pas pleinement activé.</td></tr>
+<tr><td>SG_OPEN_TO_WORLD</td><td class="sev-Critical">Critical</td><td>sg:sg-b7c3d3ac408a293fb</td><td>Security group 'open-ssh' (sg-b7c3d3ac408a293fb) autorise SSH depuis 0.0.0.0/0.</td></tr>
+<tr><td>IAM_WILDCARD_POLICY</td><td class="sev-Critical">Critical</td><td>policy:arn:aws:iam::123456789012:policy/TooMuchPower</td><td>La policy 'arn:aws:iam::123456789012:policy/TooMuchPower' autorise Action:* sur Resource:* (privilège administrateur de facto).</td></tr>
+<tr><td>ADMIN_USER_WITH_ACTIVE_KEYS</td><td class="sev-High">High</td><td>user:arn:aws:iam::123456789012:user/over-privileged-user</td><td>L'utilisateur 'over-privileged-user' a des clés d'accès actives et une policy administrateur attachée.</td></tr>
+</table>
+</body></html>

@@ -1,0 +1,63 @@
+{
+  "generated": "2026-10-07T11:43:13.685411+00:00",
+  "score": {
+    "score": 0,
+    "grade": "E",
+    "deductions": {
+      "S3_PUBLIC_BUCKET": 40,
+      "SG_OPEN_TO_WORLD": 40,
+      "IAM_WILDCARD_POLICY": 40,
+      "ADMIN_USER_WITH_ACTIVE_KEYS": 20
+    },
+    "total_findings": 4
+  },
+  "findings": [
+    {
+      "rule_id": "S3_PUBLIC_BUCKET",
+      "severity": "Critical",
+      "resource": "s3:public-leaky-bucket",
+      "description": "Bucket 'public-leaky-bucket' est accessible publiquement (ACL publique: False, policy publique: True) et Block Public Access n'est pas pleinement activé.",
+      "evidence": {
+        "public_acl": false,
+        "public_policy": true,
+        "block_public_access": {}
+      }
+    },
+    {
+      "rule_id": "SG_OPEN_TO_WORLD",
+      "severity": "Critical",
+      "resource": "sg:sg-b7c3d3ac408a293fb",
+      "description": "Security group 'open-ssh' (sg-b7c3d3ac408a293fb) autorise SSH depuis 0.0.0.0/0.",
+      "evidence": {
+        "from_port": 22,
+        "to_port": 22,
+        "protocol": "tcp",
+        "cidr": "0.0.0.0/0"
+      }
+    },
+    {
+      "rule_id": "IAM_WILDCARD_POLICY",
+      "severity": "Critical",
+      "resource": "policy:arn:aws:iam::123456789012:policy/TooMuchPower",
+      "description": "La policy 'arn:aws:iam::123456789012:policy/TooMuchPower' autorise Action:* sur Resource:* (privilège administrateur de facto).",
+      "evidence": {
+        "statement": {
+          "Effect": "Allow",
+          "Action": "*",
+          "Resource": "*"
+        }
+      }
+    },
+    {
+      "rule_id": "ADMIN_USER_WITH_ACTIVE_KEYS",
+      "severity": "High",
+      "resource": "user:arn:aws:iam::123456789012:user/over-privileged-user",
+      "description": "L'utilisateur 'over-privileged-user' a des clés d'accès actives et une policy administrateur attachée.",
+      "evidence": {
+        "active_keys": [
+          "AKIARZPUZDIKGFVEHW5X"
+        ]
+      }
+    }
+  ]
+}
