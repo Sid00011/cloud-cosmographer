@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07T11:43:13.685411+00:00",
+  "generated": "2026-10-07T12:50:21.543214+00:00",
   "score": {
     "score": 0,
     "grade": "E",
@@ -16,7 +16,7 @@
       "rule_id": "S3_PUBLIC_BUCKET",
       "severity": "Critical",
       "resource": "s3:public-leaky-bucket",
-      "description": "Bucket 'public-leaky-bucket' est accessible publiquement (ACL publique: False, policy publique: True) et Block Public Access n'est pas pleinement activÃ©.",
+      "description": "Bucket 'public-leaky-bucket' est accessible publiquement (ACL publique: False, policy publique: True) et Block Public Access n'est pas pleinement activé.",
       "evidence": {
         "public_acl": false,
         "public_policy": true,
@@ -26,8 +26,8 @@
     {
       "rule_id": "SG_OPEN_TO_WORLD",
       "severity": "Critical",
-      "resource": "sg:sg-b7c3d3ac408a293fb",
-      "description": "Security group 'open-ssh' (sg-b7c3d3ac408a293fb) autorise SSH depuis 0.0.0.0/0.",
+      "resource": "sg:sg-5570d2b9f19a76715",
+      "description": "Security group 'open-ssh' (sg-5570d2b9f19a76715) autorise SSH depuis 0.0.0.0/0.",
       "evidence": {
         "from_port": 22,
         "to_port": 22,
@@ -39,7 +39,7 @@
       "rule_id": "IAM_WILDCARD_POLICY",
       "severity": "Critical",
       "resource": "policy:arn:aws:iam::123456789012:policy/TooMuchPower",
-      "description": "La policy 'arn:aws:iam::123456789012:policy/TooMuchPower' autorise Action:* sur Resource:* (privilÃ¨ge administrateur de facto).",
+      "description": "La policy 'arn:aws:iam::123456789012:policy/TooMuchPower' autorise Action:* sur Resource:* (privilège administrateur de facto).",
       "evidence": {
         "statement": {
           "Effect": "Allow",
@@ -52,10 +52,10 @@
       "rule_id": "ADMIN_USER_WITH_ACTIVE_KEYS",
       "severity": "High",
       "resource": "user:arn:aws:iam::123456789012:user/over-privileged-user",
-      "description": "L'utilisateur 'over-privileged-user' a des clÃ©s d'accÃ¨s actives et une policy administrateur attachÃ©e.",
+      "description": "L'utilisateur 'over-privileged-user' a des clés d'accès actives et une policy administrateur attachée.",
       "evidence": {
         "active_keys": [
-          "AKIARZPUZDIKGFVEHW5X"
+          "AKIARZPUZDIKOV6QHAQY"
         ]
       }
     }
